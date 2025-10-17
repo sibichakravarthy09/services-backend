@@ -10,9 +10,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http:services-booking.netlify.app',  // Note: https
+  origin: 'https://services-booking.netlify.app', // ✅ exact match
   credentials: true
 }));
+
 app.use(express.json());
 
 // Database connection
