@@ -9,7 +9,10 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'http:services-booking.netlify.app',  // Note: https
+  credentials: true
+}));
 app.use(express.json());
 
 // Database connection
